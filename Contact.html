@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Store - Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="function.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="animate.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li class="active"><a href="Contact.html">Contact Information</a></li>
+                <li id="catalogue" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#menuCatalogue" href="Catalogue.html">Catalogue</a>
+                    <ul id="menuCatalogue" class="dropdown-menu">
+                        <li><a target="_blank" href="Apple.html">Apples</a></li>
+                        <li><a target="_blank" href="Apricot.html">Apricots</a></li>
+                        <li><a target="_blank" href="Avocado.html">Avocados</a></li>
+                        <li><a target="_blank" href="Berries.html">Mixed Berries</a></li>
+                        <li><a target="_blank" href="Grape.html">Grapes</a></li>
+                        <li><a target="_blank" href="Orange.html">Orange</a></li>
+                        <li><a target="_blank" href="Passion_Fruit.html">Passion Fruit</a></li>
+                        <li><a target="_blank" href="Peach.html">Peaches</a></li>
+                        <li><a target="_blank" href="Pear.html">Pears</a></li>
+                        <li><a target="_blank" href="Tomato.html">Tomatoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="Payment.html">Payment Methods</a></li>
+                <li onmouseenter="total()" id="cart" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#menuTotal" href="Cart.html">My Cart</a>
+                    <ul id="menuTotal" class="dropdown-menu">
+                        <li id="total"></li>
+                    </ul>
+                </li>
+            </ul>    
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit <span class="glyphicon glyphicon-search"></span></button>
+                </form>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Contact Us</h1>
+
+        <img class="img-circle" class="img-responsive" id="contact" src="images/contact.jpg">
+
+    	<h3 style="position:relative" id="address">Address : 123 My Street; MyTown; 1234</h3>
+    	<h3 style="position:relative" id="telephone">Telephone : 012 345 6789</h3>
+    	<h3 style="position:relative" id="email">E-Mail : help@mystore.co.za</h3>
+
+    </div>
+
+</body>
+
+</html>

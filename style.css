@@ -1,0 +1,39 @@
+#box_img img {
+    border: 1px solid black;
+    border-style: inset;
+    box-shadow: 10px 10px grey;
+    border-radius: 10px;
+}
+
+#box {
+	background-color: lightgreen;
+    border: 1px solid black;
+    border-style: inset;
+    box-shadow: 10px 10px grey;
+    border-radius: 10px;
+    width: 650px;
+}
+
+#cartBox {
+    height: 300px;
+    position: relative;
+}
+
+#cartButton {
+    position: absolute;
+    bottom: 0px;
+}
+
+#calcButton {
+    position: absolute;
+    top: 150px;
+    right: 400px;
+}
+
+#Arrow {
+    position: fixed;
+    top: 150px;
+    right: 200px;
+    width: 5%; 
+    transform: rotate(90deg);
+}

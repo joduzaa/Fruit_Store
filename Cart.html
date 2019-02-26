@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Store - Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="function.js"></script>
+    <script type="text/javascript" src="myCalc.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="animate.js"></script>
+</head>
+<body onload="getCart()">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact Information</a></li>
+                <li id="catalogue" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#menuCatalogue" href="Catalogue.html">Catalogue</a>
+                    <ul id="menuCatalogue" class="dropdown-menu">
+                        <li><a target="_blank" href="Apple.html">Apples</a></li>
+                        <li><a target="_blank" href="Apricot.html">Apricots</a></li>
+                        <li><a target="_blank" href="Avocado.html">Avocados</a></li>
+                        <li><a target="_blank" href="Berries.html">Mixed Berries</a></li>
+                        <li><a target="_blank" href="Grape.html">Grapes</a></li>
+                        <li><a target="_blank" href="Orange.html">Orange</a></li>
+                        <li><a target="_blank" href="Passion_Fruit.html">Passion Fruit</a></li>
+                        <li><a target="_blank" href="Peach.html">Peaches</a></li>
+                        <li><a target="_blank" href="Pear.html">Pears</a></li>
+                        <li><a target="_blank" href="Tomato.html">Tomatoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="Payment.html">Payment Methods</a></li>
+                <li class="active"><a href="Cart.html">My Cart</a></li>
+            </ul>    
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit <span class="glyphicon glyphicon-search"></span></button>
+                </form> 
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <h1>My Cart</h1>
+        <h3>Contents of Cart</h3>
+        <button onclick="launchCalc()" id="calcButton" class="btn btn-primary">A calculator</button>
+        <br>
+        <table id="print_cart" class="table table-bordered table-hover" class="center"></table>
+        <br>
+        <p id="print_total"></p>
+        <hr>
+        <h3>Discount Options</h3>
+        <form>
+            <input onchange="options()" type="checkbox" id="Buy5"> Buy 5 products : 5% discount<br>
+            <input onchange="options()" type="checkbox" id="Buy10"> Buy 10 products : 10% discount<br>
+            <input onchange="options()" type="checkbox" id="Buy15"> Buy 15 products : 20% discount<br>
+        </form>
+        <hr>
+        <h3>Delivery Options</h3>
+        <form>
+            <input onchange="options()" type="checkbox" id="Delivery"> Delivery<br>
+            <input onchange="options()" type="checkbox" id="Collection"> Collection<br>
+        </form>
+        <br>
+        <p>If you chose delivery, Please select one of these:</p>
+         <form>
+            <input onchange="options()" type="checkbox" id="PO"> Collect at Post Office : R10<br>
+            <input onchange="options()" type="checkbox" id="Hand"> Delivery at Home/Work : R50<br>
+            <input onchange="options()" type="checkbox" id="Rush"> Next day delivery : R200<br>
+        </form>
+        <hr>
+        <h3>Final Total</h3>
+        <p id="grand_total"></p>
+        <br>
+        <button onclick="clearCart()" id="clearCart" type="submit" class="btn btn-danger btn-sm">Clear Cart <span class="glyphicon glyphicon-remove"></span></button>
+        <button onclick="confirmOrder()" id="confirm" type="submit" class="btn btn-success btn-sm">Confirm Order <span class="glyphicon glyphicon-ok"></span></button>
+        <br>
+        <br>
+
+    </div>
+
+</body>
+
+</html>

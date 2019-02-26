@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Store - Catalogue</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="function.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="animate.js"></script>
+ </head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact Information</a></li>
+                <li class="active"><a href="Catalogue.html">Catalogue</a></li>
+                <li><a href="Payment.html">Payment Methods</a></li>
+	            <li onmouseenter="total()" id="cart" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#menuTotal" href="Cart.html">My Cart</a>
+                    <ul id="menuTotal" class="dropdown-menu">
+                        <li id="total"></li>
+                    </ul>
+                </li>
+            </ul>    
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit <span class="glyphicon glyphicon-search"></span></button>
+                </form> 
+        </div>
+    </nav>
+
+	<div class="container">
+		
+		<h1>Our Offerings</h1>
+		<h4>Click on the images for more information</h4>
+		
+		<img id="Arrow" src="images/arrow.png">
+
+		<div class="row">
+			<div id="cartBox" class="col-sm-3">
+				<h2>Apples</h2>
+				<div id="box_img">
+					<a target="_blank" href="Apple.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="apple" src="images/apple.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R5)
+					<input type="checkbox" id="applesSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R55)
+				  	<input type="checkbox" id="applesBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+
+			<div id="cartBox"  class="col-sm-3">
+				<h2>Apricots</h2>
+				<div id="box_img">
+					<a target="_blank" href="Apricot.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="apricot" src="images/apricot.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">1kg pack (R15)
+					<input type="checkbox" id="apricotsPack">
+			  		<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+
+			<div id="cartBox" class="col-sm-3">
+				<h2>Avocados</h2>
+				<div id="box_img">
+					<a target="_blank" href="Avocado.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="avocado" src="images/avocado.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R22)
+					<input type="checkbox" id="avocadosSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R242)
+				  	<input type="checkbox" id="avocadosBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+
+			<div id="cartBox" class="col-sm-3">		
+				<h2>Mixed Berries</h2>
+				<div id="box_img">
+					<a target="_blank" href="Berries.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="berries" src="images/berries.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">1kg pack (R30)
+					<input type="checkbox" id="berriesPack">
+			  		<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="cartBox" class="col-sm-3">
+				<h2>Grapes</h2>
+				<div id="box_img">
+					<a target="_blank" href="Grape.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="grape" src="images/grape.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">1kg pack (R25)
+					<input type="checkbox" id="grapesPack">
+			  		<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+
+			<div id="cartBox" class="col-sm-3">
+				<h2>Oranges</h2>
+				<div id="box_img">
+					<a target="_blank" href="Orange.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="orange" src="images/orange.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R7)
+					<input type="checkbox" id="orangesSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R77)
+				  	<input type="checkbox"id="orangesBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+	
+			<div id="cartBox" class="col-sm-3">
+				<h2>Passion Fruit</h2>
+				<div id="box_img">
+					<a target="_blank" href="Passion_Fruit.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="passion_fruit" src="images/passion_fruit.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R1)
+					<input type="checkbox" id="passionSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">1kg pack (R25)
+				  	<input type="checkbox" id="passionPack">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+
+			<div id="cartBox" class="col-sm-3">
+				<h2>Peaches</h2>
+				<div id="box_img">
+					<a target="_blank" href="Peach.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="peach" src="images/peach.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>			
+				<label class="container">Single (R3)
+					<input type="checkbox" id="peachesSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R33)
+				  	<input type="checkbox" id="peachesBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div id="cartBox" class="col-sm-3">
+				<h2>Pears</h2>
+				<div id="box_img">
+					<a target="_blank" href="Pear.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="pear" src="images/pear.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R4)
+					<input type="checkbox" id="pearsSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R44)
+				  	<input type="checkbox" id="pearsBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+	
+			<div id="cartBox" class="col-sm-3">
+				<div id="box_img">
+				<h2>Tomatoes</h2>
+					<a target="_blank" href="Tomato.html"> <img class="img-thumbnail" class="img-responsive" style="width:50%" id="tomato" src="images/tomato.jpg"> </a>
+				</div>
+				<br>
+				<p>Choose your pack size :</p>
+				<label class="container">Single (R2)
+					<input type="checkbox" id="tomatoesSingle">
+			  		<span class="checkmark"></span>
+				</label>
+				<label class="container">Box of 12 (R22)
+					<input type="checkbox" id="tomatoesBox">
+					<span class="checkmark"></span>
+				</label>
+				<button onclick="quickAdd()" id="cartButton" type="submit" class="cartButton btn btn-primary btn-sm">Add to cart <span class="glyphicon glyphicon-shopping-cart"></span></button>
+			</div>
+		</div>
+
+		<h1>Our Pack Sizes</h1>
+		<table class="table table-bordered table-hover" class="center">
+			<tr>
+				<td><b>Fruit</b></td>
+				<td><b>Single</b></td>
+				<td><b>Box of 12</b></td>
+				<td><b>1kg Packet</b></td>
+			</tr>
+			<tr>
+				<td>Apples</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Apricots</td>
+				<td></td>
+				<td></td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>Avocados</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Mixed Berries</td>
+				<td></td>
+				<td></td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>Grapes</td>
+				<td></td>
+				<td></td>
+				<td>X</td>
+			</tr>
+				<td>Oranges</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+				<td>Passion Fruit</td>
+				<td>X</td>
+				<td></td>
+				<td>X</td>
+			</tr>
+				<td>Peaches</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+				<td>Pears</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+				<td>Tomatoes</td>
+				<td>X</td>
+				<td>X</td>
+				<td></td>
+			</tr>
+		</table>
+
+    </div>
+
+</body>
+
+</html>
